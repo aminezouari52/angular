@@ -34,13 +34,13 @@ export class AppComponent implements OnInit {
     })
   }
   updateUser() {
-    return this.httpClient.get(`http://localhost:5000/api/users/update${params.id}`).subscribe(res => {
+    return this.httpClient.get(`http://localhost:5000/api/users/update${this.getparamid}`).subscribe(res => {
       console.log(res);
       
     })
   }
   deleteUser() {
-    return this.httpClient.get(`http://localhost:5000/api/users/delete${params.id}`).subscribe(res => {
+    return this.httpClient.get(`http://localhost:5000/api/users/delete${this.getparamid}`).subscribe(res => {
       console.log(res);
       
     })
